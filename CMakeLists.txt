@@ -9,9 +9,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Add include directories
 include_directories(
-    /usr/include/GL
-    /usr/include/GLFW
-    /usr/include/glm
+    /usr/dev/GL
+    /usr/dev/GLFW
+    /usr/dev/glm
 )
 
 # Add library directories (Optional, CMake usually finds these automatically)
