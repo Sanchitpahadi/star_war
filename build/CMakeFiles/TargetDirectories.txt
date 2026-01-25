@@ -1,0 +1,3 @@
+/home/sanchit/project/star_war/build/CMakeFiles/game_executable.dir
+/home/sanchit/project/star_war/build/CMakeFiles/edit_cache.dir
+/home/sanchit/project/star_war/build/CMakeFiles/rebuild_cache.dir
