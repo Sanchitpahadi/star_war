@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/game_executable.dir/glad.c.o CMakeFiles/game_executable.dir/main.cpp.o -o game_executable   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libglfw.so /usr/lib/x86_64-linux-gnu/libGLEW.so 
