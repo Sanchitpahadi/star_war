@@ -1,0 +1,3 @@
+/home/sanchit/project/star_war/build/CMakeFiles/cpp.dir
+/home/sanchit/project/star_war/build/CMakeFiles/edit_cache.dir
+/home/sanchit/project/star_war/build/CMakeFiles/rebuild_cache.dir
