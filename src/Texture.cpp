@@ -1,6 +1,6 @@
 #include "Texture.h"
-#include "Glad/glad.h"
-#include <GLFW/glfw3.h>
+#include <Glad/glad.h>
+
 #include "std_img.h"
 #include <iostream>
 

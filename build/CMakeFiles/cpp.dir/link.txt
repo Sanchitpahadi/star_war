@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/cpp.dir/src/glad.c.o CMakeFiles/cpp.dir/src/main.cpp.o CMakeFiles/cpp.dir/src/Texture.cpp.o CMakeFiles/cpp.dir/src/VertexArray.cpp.o CMakeFiles/cpp.dir/src/VertexBuffer.cpp.o CMakeFiles/cpp.dir/src/VertexBufferLayout.cpp.o -o cpp  /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libglfw.so.3.3 -ldl 

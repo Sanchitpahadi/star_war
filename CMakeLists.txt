@@ -22,6 +22,7 @@ set(SOURCES
     src/VertexArray.cpp
     src/VertexBuffer.cpp
     src/VertexBufferLayout.cpp
+    src/TextRenderer.cpp
 )
 
 add_executable(cpp ${SOURCES})

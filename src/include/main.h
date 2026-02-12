@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Glad/glad.h"  // First, include Glad
 #include <GLFW/glfw3.h>  // Then include GLFW (if you're using it)
 #define STBI_MALLOC(sz) malloc(sz)
@@ -24,6 +25,7 @@
 #include "Bullet.h"
 #include "VertexArray.h"
 #include "VertexBufferLayout.h"
+#include "TextRenderer.h"
 #include "shader.h"
 
 
