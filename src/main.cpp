@@ -89,7 +89,7 @@ int main() {
     std::cout << "VertexArray bulletVA created" << std::endl;
 
     // Load textures
-    Texture tex("texture/container.png");
+    Texture tex("texture/Blue.png");
     std::cout << "Texture tex loaded" << std::endl;
     
     Texture bull("texture/bullet.png");
