@@ -20,11 +20,9 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include "VertexBuffer.h"
+
 #include "Texture.h"
 #include "Bullet.h"
-#include "VertexArray.h"
-#include "VertexBufferLayout.h"
 #include "TextRenderer.h"
 #include "shader.h"
 
@@ -59,11 +57,28 @@ bool enemyCollisionLogic(Enemy& enemy, std::vector<Bullet>& bullets) {
     return false;
 }
 
-std::string readShaderFromFile(const std::string& shaderPath) {
-    std::ifstream shaderFile;
-    std::stringstream shaderStream;
-    shaderFile.open(shaderPath);
-    shaderStream << shaderFile.rdbuf();
-    shaderFile.close();
-    return shaderStream.str();
+
+void movement(GLFWwindow* window) {
+    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS) {
+        trianglePosition.x -= 0.007f;
+    }
+    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS) {
+        trianglePosition.x += 0.007f;
+    }
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS) {
+        trianglePosition.y += 0.007f;
+    }
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS || glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS) {
+        trianglePosition.y -= 0.007f;
+    }
+    
+    // Wrap around screen edges
+    if (trianglePosition.x < -0.9f) trianglePosition.x = 0.9f;
+    if (trianglePosition.x > 0.9f) trianglePosition.x = -0.9f;
+    if (trianglePosition.y < -0.9f) trianglePosition.y = 0.9f;
+    if (trianglePosition.y > 0.9f) trianglePosition.y = -0.9f;
+
+
 }
+
+

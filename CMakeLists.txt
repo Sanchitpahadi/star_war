@@ -23,6 +23,12 @@ set(SOURCES
     src/VertexBuffer.cpp
     src/VertexBufferLayout.cpp
     src/TextRenderer.cpp
+    src/Window.cpp
+    src/Renderer.cpp
+    src/Mesh.cpp
+
+
+
 )
 
 add_executable(cpp ${SOURCES})
