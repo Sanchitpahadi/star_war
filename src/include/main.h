@@ -30,6 +30,8 @@
 
 const float collisionThreshold = 0.1f; // Adjust the value based on your game's requirements
 
+glm::vec3 trianglePosition(0.0f, -0.6f, 0.0f);
+
 
 class Enemy {
 public:

@@ -3,7 +3,6 @@
 #include"Renderer.h"
 #include"Mesh.h"
 
-glm::vec3 trianglePosition(0.0f, -0.6f, 0.0f);
 
 int main() {
     Window window(800, 600, "Engine");
