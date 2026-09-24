@@ -20,10 +20,15 @@ public:
 
     void Draw() const;
 
+    void InitInstancing(const void* instanceData, unsigned int dataSize, const VertexBufferLayout& instanceLayout, unsigned int baseAttribLocation, unsigned int divisor = 1);
+    void UpdateInstanceData(const void* data, unsigned int size);
+    void DrawInstanced(unsigned int instanceCount) const;
+
 private:
 
     unsigned int ebo;
     VertexArray vao;
+    VertexBuffer instanceVBO;
     VertexBuffer vbo;
     VertexBufferLayout layout;
 

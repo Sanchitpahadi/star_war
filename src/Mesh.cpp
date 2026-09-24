@@ -21,6 +21,24 @@ Mesh::Mesh(const std::vector<float>& vertices,
 
     Unbind();    
 }
+void Mesh::InitInstancing(const void* instanceData, unsigned int dataSize,
+    const VertexBufferLayout& instanceLayout, unsigned int baseAttribLocation, unsigned int divisor)
+{
+    instanceVBO.Init(dataSize, instanceData, GL_DYNAMIC_DRAW);
+    vao.AddInstancedBuffer(instanceVBO, instanceLayout, baseAttribLocation, divisor);
+}
+
+void Mesh::UpdateInstanceData(const void* data, unsigned int size)
+{
+    instanceVBO.SetData(size, data);
+}
+
+void Mesh::DrawInstanced(unsigned int instanceCount) const
+{
+    vao.Bind();
+    glDrawElementsInstanced(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0, instanceCount);
+    glBindVertexArray(0);
+}
 
 Mesh::~Mesh()
 {

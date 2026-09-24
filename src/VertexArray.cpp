@@ -36,3 +36,25 @@ void VertexArray::Unbind() const
 {
     glBindVertexArray(0);
 }
+
+void VertexArray::AddInstancedBuffer(const VertexBuffer& vb, const VertexBufferLayout& layout, unsigned int baseAttribLocation, unsigned int divisor)
+{
+    Bind();
+    vb.Bind();
+
+    const auto& elements = layout.GetElementLayout();
+    unsigned int offset = 0;
+
+    for (unsigned int i = 0; i < elements.size(); i++)
+    {
+        const auto& element = elements[i];
+        unsigned int location = baseAttribLocation + i;
+
+        glEnableVertexAttribArray(location);
+        glVertexAttribPointer(location, element.count, element.type, element.normalized,
+            layout.GetStride(), (const void*)(uintptr_t)offset);
+        glVertexAttribDivisor(location, divisor);
+
+        offset += element.count * ElementLayout::getSizeOfType(element.type);
+    }
+}
