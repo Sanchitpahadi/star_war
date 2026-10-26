@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cpp.dir/link.d"
   "CMakeFiles/cpp.dir/src/Mesh.cpp.o"
   "CMakeFiles/cpp.dir/src/Mesh.cpp.o.d"
   "CMakeFiles/cpp.dir/src/Renderer.cpp.o"

@@ -4,17 +4,12 @@ project(Game)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# -------------------------
-# Include paths
-# -------------------------
 include_directories(
     ${CMAKE_SOURCE_DIR}/dev
     ${CMAKE_SOURCE_DIR}/src/include
 )
 
-# -------------------------
-# Source files
-# -------------------------
+
 set(SOURCES
     src/glad.c
     src/main.cpp
@@ -26,16 +21,10 @@ set(SOURCES
     src/Window.cpp
     src/Renderer.cpp
     src/Mesh.cpp
-
-
-
 )
 
 add_executable(cpp ${SOURCES})
 
-# -------------------------
-# Libraries
-# -------------------------
 find_package(OpenGL REQUIRED)
 find_package(glfw3 REQUIRED)
 
@@ -45,9 +34,7 @@ target_link_libraries(cpp
     dl
 )
 
-# -------------------------
-# Copy shaders next to exe
-# -------------------------
+
 file(GLOB SHADER_FILES
     "${CMAKE_SOURCE_DIR}/src/shader/*.vs"
     "${CMAKE_SOURCE_DIR}/src/shader/*.fs"
@@ -61,9 +48,7 @@ foreach(SHADER ${SHADER_FILES})
     )
 endforeach()
 
-# -------------------------
-# Copy texture directory
-# -------------------------
+
 add_custom_command(TARGET cpp POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
     ${CMAKE_SOURCE_DIR}/src/texture
