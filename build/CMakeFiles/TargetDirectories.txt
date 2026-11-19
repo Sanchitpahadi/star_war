@@ -1,3 +1,0 @@
-/home/sanc/project/star_war/build/CMakeFiles/cpp.dir
-/home/sanc/project/star_war/build/CMakeFiles/edit_cache.dir
-/home/sanc/project/star_war/build/CMakeFiles/rebuild_cache.dir
