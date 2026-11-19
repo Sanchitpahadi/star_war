@@ -3,4 +3,5 @@ cmake-build-*/
 *.o
 *.a
 *.so
-*.exe
+*.exebuild/
+*.o
