@@ -1,3 +1,10 @@
-# Camera System
+# 2D
 
-Camera system and How it works on engine both 2d and 3d gonna be study carefully with vizualize diagram and any maths needed with some pictures and other resources ever available
+The 2D one is already being started there is a 2d rectangle with a texture on its top but also i know its not all about 2D there are still diffrent tricks and tipis that needed in 2D game devllopment which will be listened and typed and coded all by me so lets get started
+
+Things to do :
+
+1. Learn about terrian devlopment .
+2. Add Dear Imgui .
+3. 2D physcs and collision .
+4. A simple game in 2D
