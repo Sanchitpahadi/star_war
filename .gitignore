@@ -5,3 +5,5 @@ cmake-build-*/
 *.so
 *.exebuild/
 *.o
+build/
+*.o
