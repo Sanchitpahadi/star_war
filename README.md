@@ -7,4 +7,4 @@ Things to do :
 1. Learn about terrian devlopment .
 2. Add Dear Imgui .
 3. 2D physcs and collision .
-4. A simple game in 2D
+4. A simple game in 2D.
