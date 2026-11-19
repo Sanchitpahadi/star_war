@@ -3,7 +3,7 @@
 #include"Renderer.h"
 #include"Mesh.h"
 
-const unsigned int INSTANCE_COUNT = 1040;
+const unsigned int INSTANCE_COUNT = 140;
 
 int main() {
     Window window(800, 600, "Engine");
@@ -69,22 +69,22 @@ int main() {
 
             text.renderText("PRESS SPACE TO START", 200, 300, 1.0f, 1.0f, 1.0f);
         }
-     else
-    {
-        shader.use();
+        else
+        {
+            shader.use();
 
-        int projLoc = glGetUniformLocation(shader.ID, "projection");
-        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+            int projLoc = glGetUniformLocation(shader.ID, "projection");
+            glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 
-        int viewLoc = glGetUniformLocation(shader.ID, "view");
-        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+            int viewLoc = glGetUniformLocation(shader.ID, "view");
+            glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 
-        tex.Bind(0);
-        rectangle.DrawInstanced(INSTANCE_COUNT);
-    }
-        window.SwapBuffers();
-        window.PollEvents();
-    }
+            tex.Bind(0);
+            rectangle.DrawInstanced(INSTANCE_COUNT);
+        }
+            window.SwapBuffers();
+            window.PollEvents();
+        }
 
-    return 0;
+        return 0;
 }
